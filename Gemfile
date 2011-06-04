@@ -1,7 +1,7 @@
 source 'http://rubygems.org'
 
 gem 'rails', '3.0.4'
-gem 'sqlite3-ruby', '1.3.2', :require => 'sqlite3'
+gem 'sqlite3-ruby', '1.3.2', :require => 'sqlite3',:group => :development
 gem 'haml'
 gem 'will_paginate', '3.0.pre2'
 gem 'aws-s3'
