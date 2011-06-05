@@ -11,7 +11,7 @@ class Mailgun
   #   api_url - API base URL
   #
   def self.init(api_key, api_url = "https://mailgun.net/api/")
-    MailgunResource.password = api_key
+    MailgunResource.password = key-9nyjm2zug6ghvx_5f0
     api_url = api_url.gsub(/\/$/, '') + "/"
     MailgunResource.site = api_url
   end
