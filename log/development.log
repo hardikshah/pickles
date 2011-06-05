@@ -1063,3 +1063,93 @@ Rendered layouts/_header.html.haml (130.7ms)
 Rendered layouts/_footer.html.haml (5.0ms)
 Rendered posts/search.html.haml within layouts/application (328.6ms)
 Completed 200 OK in 440ms (Views: 333.9ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-06-05 11:10:44 -0400
+  Processing by PagesController#home as HTML
+Rendered layouts/_stylesheets.html.haml (22.3ms)
+  [1m[36mSQL (0.9ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Rendered layouts/_header.html.haml (480.9ms)
+Rendered layouts/_footer.html.haml (21.0ms)
+Rendered pages/home.html.haml within layouts/application (592.4ms)
+Completed 200 OK in 612ms (Views: 609.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2011-06-05 11:10:48 -0400
+  Processing by PostsController#new as HTML
+  [1m[35mState Load (0.5ms)[0m  SELECT "states".* FROM "states" ORDER BY states.name ASC
+  [1m[36mCity Load (0.8ms)[0m  [1mSELECT "cities".* FROM "cities" ORDER BY cities.name ASC[0m
+  [1m[35mCategory Load (2.3ms)[0m  SELECT "categories".* FROM "categories" WHERE "categories"."category_type" = 'Goods'
+  [1m[36mCategory Load (1.1ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."category_type" = 'Services'[0m
+Rendered shared/_error_messages.html.haml (12.7ms)
+  [1m[35mUser Load (5.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mCategory Load (0.4ms)[0m  [1mSELECT "categories"."id" FROM "categories" INNER JOIN "categories_posts" ON "categories".id = "categories_posts".category_id WHERE "categories"."id" = 1 AND ("categories_posts".post_id = NULL ) LIMIT 1[0m
+  [1m[35mCategory Load (0.3ms)[0m  SELECT "categories"."id" FROM "categories" INNER JOIN "categories_posts" ON "categories".id = "categories_posts".category_id WHERE "categories"."id" = 2 AND ("categories_posts".post_id = NULL ) LIMIT 1
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT "categories"."id" FROM "categories" INNER JOIN "categories_posts" ON "categories".id = "categories_posts".category_id WHERE "categories"."id" = 3 AND ("categories_posts".post_id = NULL ) LIMIT 1[0m
+  [1m[35mCategory Load (0.6ms)[0m  SELECT "categories"."id" FROM "categories" INNER JOIN "categories_posts" ON "categories".id = "categories_posts".category_id WHERE "categories"."id" = 4 AND ("categories_posts".post_id = NULL ) LIMIT 1
+  [1m[36mCategory Load (1.7ms)[0m  [1mSELECT "categories"."id" FROM "categories" INNER JOIN "categories_posts" ON "categories".id = "categories_posts".category_id WHERE "categories"."id" = 5 AND ("categories_posts".post_id = NULL ) LIMIT 1[0m
+  [1m[35mCategory Load (0.3ms)[0m  SELECT "categories"."id" FROM "categories" INNER JOIN "categories_posts" ON "categories".id = "categories_posts".category_id WHERE "categories"."id" = 6 AND ("categories_posts".post_id = NULL ) LIMIT 1
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT "categories"."id" FROM "categories" INNER JOIN "categories_posts" ON "categories".id = "categories_posts".category_id WHERE "categories"."id" = 7 AND ("categories_posts".post_id = NULL ) LIMIT 1[0m
+  [1m[35mCategory Load (0.5ms)[0m  SELECT "categories"."id" FROM "categories" INNER JOIN "categories_posts" ON "categories".id = "categories_posts".category_id WHERE "categories"."id" = 8 AND ("categories_posts".post_id = NULL ) LIMIT 1
+  [1m[36mCategory Load (0.9ms)[0m  [1mSELECT "categories"."id" FROM "categories" INNER JOIN "categories_posts" ON "categories".id = "categories_posts".category_id WHERE "categories"."id" = 9 AND ("categories_posts".post_id = NULL ) LIMIT 1[0m
+  [1m[35mCategory Load (3.1ms)[0m  SELECT "categories"."id" FROM "categories" INNER JOIN "categories_posts" ON "categories".id = "categories_posts".category_id WHERE "categories"."id" = 10 AND ("categories_posts".post_id = NULL ) LIMIT 1
+  [1m[36mCategory Load (0.4ms)[0m  [1mSELECT "categories"."id" FROM "categories" INNER JOIN "categories_posts" ON "categories".id = "categories_posts".category_id WHERE "categories"."id" = 11 AND ("categories_posts".post_id = NULL ) LIMIT 1[0m
+  [1m[35mCategory Load (1.0ms)[0m  SELECT "categories"."id" FROM "categories" INNER JOIN "categories_posts" ON "categories".id = "categories_posts".category_id WHERE "categories"."id" = 12 AND ("categories_posts".post_id = NULL ) LIMIT 1
+  [1m[36mCategory Load (0.6ms)[0m  [1mSELECT "categories"."id" FROM "categories" INNER JOIN "categories_posts" ON "categories".id = "categories_posts".category_id WHERE "categories"."id" = 13 AND ("categories_posts".post_id = NULL ) LIMIT 1[0m
+  [1m[35mCategory Load (0.3ms)[0m  SELECT "categories"."id" FROM "categories" INNER JOIN "categories_posts" ON "categories".id = "categories_posts".category_id WHERE "categories"."id" = 14 AND ("categories_posts".post_id = NULL ) LIMIT 1
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT "categories"."id" FROM "categories" INNER JOIN "categories_posts" ON "categories".id = "categories_posts".category_id WHERE "categories"."id" = 15 AND ("categories_posts".post_id = NULL ) LIMIT 1[0m
+  [1m[35mCategory Load (0.3ms)[0m  SELECT "categories"."id" FROM "categories" INNER JOIN "categories_posts" ON "categories".id = "categories_posts".category_id WHERE "categories"."id" = 16 AND ("categories_posts".post_id = NULL ) LIMIT 1
+  [1m[36mCategory Load (0.4ms)[0m  [1mSELECT "categories"."id" FROM "categories" INNER JOIN "categories_posts" ON "categories".id = "categories_posts".category_id WHERE "categories"."id" = 17 AND ("categories_posts".post_id = NULL ) LIMIT 1[0m
+  [1m[35mCategory Load (0.3ms)[0m  SELECT "categories"."id" FROM "categories" INNER JOIN "categories_posts" ON "categories".id = "categories_posts".category_id WHERE "categories"."id" = 18 AND ("categories_posts".post_id = NULL ) LIMIT 1
+  [1m[36mCategory Load (2.5ms)[0m  [1mSELECT "categories"."id" FROM "categories" INNER JOIN "categories_posts" ON "categories".id = "categories_posts".category_id WHERE "categories"."id" = 19 AND ("categories_posts".post_id = NULL ) LIMIT 1[0m
+  [1m[35mCategory Load (0.3ms)[0m  SELECT "categories"."id" FROM "categories" INNER JOIN "categories_posts" ON "categories".id = "categories_posts".category_id WHERE "categories"."id" = 20 AND ("categories_posts".post_id = NULL ) LIMIT 1
+  [1m[36mCategory Load (0.4ms)[0m  [1mSELECT "categories"."id" FROM "categories" INNER JOIN "categories_posts" ON "categories".id = "categories_posts".category_id WHERE "categories"."id" = 21 AND ("categories_posts".post_id = NULL ) LIMIT 1[0m
+  [1m[35mCategory Load (0.3ms)[0m  SELECT "categories"."id" FROM "categories" INNER JOIN "categories_posts" ON "categories".id = "categories_posts".category_id WHERE "categories"."id" = 22 AND ("categories_posts".post_id = NULL ) LIMIT 1
+  [1m[36mCategory Load (0.6ms)[0m  [1mSELECT "categories"."id" FROM "categories" INNER JOIN "categories_posts" ON "categories".id = "categories_posts".category_id WHERE "categories"."id" = 23 AND ("categories_posts".post_id = NULL ) LIMIT 1[0m
+  [1m[35mCategory Load (0.3ms)[0m  SELECT "categories"."id" FROM "categories" INNER JOIN "categories_posts" ON "categories".id = "categories_posts".category_id WHERE "categories"."id" = 24 AND ("categories_posts".post_id = NULL ) LIMIT 1
+  [1m[36mCategory Load (0.5ms)[0m  [1mSELECT "categories"."id" FROM "categories" INNER JOIN "categories_posts" ON "categories".id = "categories_posts".category_id WHERE "categories"."id" = 25 AND ("categories_posts".post_id = NULL ) LIMIT 1[0m
+  [1m[35mCategory Load (0.5ms)[0m  SELECT "categories"."id" FROM "categories" INNER JOIN "categories_posts" ON "categories".id = "categories_posts".category_id WHERE "categories"."id" = 26 AND ("categories_posts".post_id = NULL ) LIMIT 1
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT "categories"."id" FROM "categories" INNER JOIN "categories_posts" ON "categories".id = "categories_posts".category_id WHERE "categories"."id" = 27 AND ("categories_posts".post_id = NULL ) LIMIT 1[0m
+  [1m[35mCategory Load (1.0ms)[0m  SELECT "categories"."id" FROM "categories" INNER JOIN "categories_posts" ON "categories".id = "categories_posts".category_id WHERE "categories"."id" = 28 AND ("categories_posts".post_id = NULL ) LIMIT 1
+  [1m[36mCategory Load (0.6ms)[0m  [1mSELECT "categories"."id" FROM "categories" INNER JOIN "categories_posts" ON "categories".id = "categories_posts".category_id WHERE "categories"."id" = 29 AND ("categories_posts".post_id = NULL ) LIMIT 1[0m
+  [1m[35mCategory Load (0.3ms)[0m  SELECT "categories"."id" FROM "categories" INNER JOIN "categories_posts" ON "categories".id = "categories_posts".category_id WHERE "categories"."id" = 30 AND ("categories_posts".post_id = NULL ) LIMIT 1
+  [1m[36mCategory Load (2.4ms)[0m  [1mSELECT "categories"."id" FROM "categories" INNER JOIN "categories_posts" ON "categories".id = "categories_posts".category_id WHERE "categories"."id" = 31 AND ("categories_posts".post_id = NULL ) LIMIT 1[0m
+  [1m[35mCategory Load (0.3ms)[0m  SELECT "categories"."id" FROM "categories" INNER JOIN "categories_posts" ON "categories".id = "categories_posts".category_id WHERE "categories"."id" = 32 AND ("categories_posts".post_id = NULL ) LIMIT 1
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT "categories"."id" FROM "categories" INNER JOIN "categories_posts" ON "categories".id = "categories_posts".category_id WHERE "categories"."id" = 33 AND ("categories_posts".post_id = NULL ) LIMIT 1[0m
+  [1m[35mCategory Load (0.3ms)[0m  SELECT "categories"."id" FROM "categories" INNER JOIN "categories_posts" ON "categories".id = "categories_posts".category_id WHERE "categories"."id" = 34 AND ("categories_posts".post_id = NULL ) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Rendered posts/_post_form.html.haml (744.8ms)
+Rendered layouts/_stylesheets.html.haml (11.9ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Rendered layouts/_header.html.haml (19.9ms)
+Rendered layouts/_footer.html.haml (13.2ms)
+Rendered posts/new.html.haml within layouts/application (829.6ms)
+Completed 200 OK in 1710ms (Views: 817.9ms | ActiveRecord: 32.4ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2011-06-05 11:11:12 -0400
+  Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5Eqmu+vgDkgdd2ytmxsQP52srbTrOP4Ht4qLOkq4orQ=", "post"=>{"title"=>"a", "description"=>"a", "trade_for"=>"a", "email"=>"hardikshah@gatech.edu", "city_id"=>"3", "category_ids"=>["3"]}, "state_id"=>"1", "commit"=>"Create Post"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mCategory Load (0.5ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = 3 LIMIT 1[0m
+  [1m[35mAREL (1.3ms)[0m  INSERT INTO "posts" ("title", "description", "trade_for", "city_id", "user_id", "created_at", "updated_at", "active", "email", "activation_hash", "activated_at") VALUES ('a', 'a', 'a', 3, NULL, '2011-06-05 15:11:13.179841', '2011-06-05 15:11:13.179841', 'f', 'hardikshah@gatech.edu', '2b135f84a5d40342df99b473f2a7c7dd8dcb98d609d200c3ae129f8764300c67', NULL)
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "categories_posts" ("post_id", "category_id") VALUES (9, 3)[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 955ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-06-05 11:11:13 -0400
+  Processing by PagesController#home as HTML
+Rendered layouts/_stylesheets.html.haml (22.7ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Rendered layouts/_header.html.haml (654.3ms)
+Rendered layouts/_footer.html.haml (13.0ms)
+Rendered pages/home.html.haml within layouts/application (770.9ms)
+Completed 200 OK in 805ms (Views: 803.2ms | ActiveRecord: 0.5ms)
