@@ -11,6 +11,7 @@ class Mailgun
   #   api_url - API base URL
   #
   def self.init(api_key, api_url = "https://mailgun.net/api/")
+    
     MailgunResource.password = api_key
     api_url = api_url.gsub(/\/$/, '') + "/"
     MailgunResource.site = api_url
@@ -112,7 +113,7 @@ end
 # It adds upsert() method on top of ActiveResource::Base
 #
 class MailgunResource < ActiveResource::Base
-  self.user = "api_key"
+  self.user = "key-9nyjm2zug6ghvx_5f0"
   extend Mailgun::RequestBuilder
 
   # Create new resource or update it if resource already exist.
